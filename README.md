@@ -1,8 +1,24 @@
 # Simplicity
 
-Simplicity is a blockchain programming language designed as an alternative to Bitcoin script.
+> [!IMPORTANT]
+> The Simplicity language and implementation are still under development.
 
-The language and implementation is still under development.
+[Simplicity](https://simplicity-lang.org/) is a blockchain programming language designed as an alternative to Bitcoin script.
+
+It is a low-level, typed functional language designed to be a drop-in alternative
+for Bitcoin's [Tapscript](https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki).
+It offers static resource bounds and has a formal specification (in Rocq) which allows the
+creation of machine-checkable proofs of program behavior.
+
+It is currently deployed on Blockstream's [Liquid](https://liquid.net), which is a sidechain resembling Bitcoin
+in many ways; but which differs in many Script-relevant ways (e.g. supporting multiple
+assets and using Confidential Transactions).
+
+This repo is the core Haskell and C implementation of Simplicity (AKA libSimplicity).
+
+If you are simply looking to develop with the
+language, you may wish to use [SimplicityHL](https://github.com/BlockstreamResearch/simplicityhl), or [rust-simplicity](https://github.com/BlockstreamResearch/rust-simplicity)
+instead.
 
 ## Contents
 
