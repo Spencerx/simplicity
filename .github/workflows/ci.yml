@@ -11,6 +11,12 @@ jobs:
         with:
             ignore_words_file: spelling.ignore.txt
             skip: alectryon
+  clang-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test C library with clang (-Wall -Werror)
+        run: CC=clang CFLAGS="-Wimplicit-fallthrough -Wconditional-uninitialized" make -C C -j$(nproc) check doCheck=1
   build:
     strategy:
       fail-fast: false
