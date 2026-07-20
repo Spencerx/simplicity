@@ -157,7 +157,7 @@ rustJetCmr mod = vsep $
         ]))
     , "};"
     , mempty
-    , "Cmr(Midstate(bytes))"
+    , "Cmr::from_byte_array(bytes)"
     ]))
   , "}"
   ]
@@ -338,7 +338,6 @@ rustImports mod = vsep (map (<> semi)
   , "use crate::decode_bits"
   , "use crate::{decode, BitIter, BitWriter}"
   , "use crate::analysis::Cost"
-  , "use hashes::sha256::Midstate"
   , "use simplicity_sys::CFrameItem"
   , "use std::io::Write"
   , "use std::{fmt, str}"
